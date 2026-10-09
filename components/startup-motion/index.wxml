@@ -1,0 +1,1 @@
+<view class="startup" catchtap="finish"><view class="letter-row"><view wx:for="{{letters}}" wx:key="index" class="cell"><text class="letter" style="animation-delay:{{index * 90}}ms">{{item}}</text><view class="line" style="animation-delay:{{index * 90 + 180}}ms"></view></view></view><text class="caption">准备好，开始学习</text></view>

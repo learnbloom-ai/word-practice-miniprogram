@@ -4,6 +4,7 @@ const { AudioService } = require("../../services/audio");
 Page({
   data: {
     setup: true,
+    launching: true,
     state: {
       item: null,
       words: [],
@@ -23,6 +24,7 @@ Page({
     mistakes: [],
     reviews: [],
   },
+  finishLaunch() { this.setData({ launching: false }); },
   onLoad() {
     this.store =
       getApp().globalData.learningStore ||
