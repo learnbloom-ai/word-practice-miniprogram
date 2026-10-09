@@ -10,7 +10,7 @@ function walk(dir) {
     const f = path.join(dir, name),
       rel = path.relative(root, f);
     if (fs.statSync(f).isDirectory()) {
-      if (name !== "tests") walk(f);
+      if (!["tests", ".git", "node_modules"].includes(name)) walk(f);
       continue;
     }
     if (name === "README.md" || name === "package.json") continue;
